@@ -1,0 +1,315 @@
+main#song_side
+{
+  position: relative;
+  height: 100%;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: hsl(345, 0%, 10%);
+  z-index: 1;
+}
+
+
+main#song_side::before
+{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/monika.png);
+  background-repeat: no-repeat;
+  background-size: 30rem;
+  background-position: 95% 0;
+  z-index: 0;
+  filter: opacity(.25);
+}
+
+/*nav insidemain content*/
+main#song_side nav
+{
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(var(--hue), 0%, 20%, 0.3);
+}
+
+main#song_side nav ul
+{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}
+
+main#song_side nav ul li
+{
+  position: relative;
+  width: 30%;
+  padding: 0 .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: hsl(var(--hue), 0%, 70%);
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+main#song_side nav ul li:hover,
+main#song_side nav ul li:first-of-type
+{
+  color: hsl(var(--hue), 0%, 100%);
+  background-color: hsl(var(--hue), 0%, 90%, 0.1);
+}
+
+main#song_side nav ul li span
+{
+  position: absolute;
+  height: .3rem;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: hsl(var(--hue), 100%, 50%);
+}
+
+main#song_side nav span#search
+{
+  position: relative;
+  height: 75%;
+  width: 40%;
+  padding: .1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(var(--hue), 0%, 5%, 0.7);
+  border-radius: 2rem;
+}
+
+main#song_side nav span#search img.svg
+{
+  position: absolute;
+  height: 2rem;
+  width: 4rem;
+  padding: .1rem 0;
+  border-radius: 2rem;
+}
+
+main#song_side nav span#search img.svg:hover
+{
+  /*This keep the white color*/
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+main#song_side nav span#search input
+{
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem 0 4rem;
+  background-color: hsl(var(--hue), 0%, 90%, 0.1);
+  color: hsl(var(--hue), 0%, 100%);
+  font-size: 1.1rem;
+  border: .1rem solid hsl(var(--hue), 0%, 100%);
+  border-radius: 2rem;
+}
+
+main#song_side nav span#search:hover
+{
+  background-color: hsl(var(--hue), 0%, 90%, 0.15);
+  border-color: hsl(158, 100%, 50%);
+  cursor: text;
+}
+
+main#song_side nav img#user
+{
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: .5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: .2rem solid hsl(var(--hue), 100%, 50%);
+}
+
+/*song info inside main content:*/
+main#song_side nav,
+main#song_side section#song_info,
+main#song_side section#popular_songs,
+main#song_side section#popular_artists
+{
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+main#song_side section#song_info,
+main#song_side section#popular_songs
+{
+  height: 30%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+main#song_side section#song_info button
+{
+  height: 2rem;
+  width: 8rem;
+  margin-right: .5rem;
+  background: none;
+  color: hsl(var(--hue), 0%, 100%);
+  font-size: 1.25rem;
+  border: .15rem solid hsl(var(--hue), 100%, 50%);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+main#song_side section#song_info button:hover
+{
+  background: hsl(345, 0%, 5%);
+  color: hsl(var(--hue), 100%, 50%);
+}
+
+/*popular songs insidemain content:*/
+main#song_side section#popular_songs,
+main#song_side section#popular_artists
+{
+  position: relative;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+main#song_side section#popular_songs span.container_title_scroll,
+main#song_side section#popular_artists span.container_title_scroll
+{
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main#song_side section#popular_songs span.container_title_scroll div.buttons,
+main#song_side section#popular_artists span.container_title_scroll div.buttons
+{
+  display: flex;
+  align-items: center;
+}
+
+main#song_side section#popular_songs span.container_title_scroll div.buttons img.svg,
+main#song_side section#popular_artists span.container_title_scroll div.buttons img.svg
+{
+  height: 1.75rem;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+main#song_side section#popular_songs ul.container_songs,
+main#song_side section#popular_artists ul.container_artists
+{
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+main#song_side section#popular_songs ul.container_songs::-webkit-scrollbar,
+main#song_side section#popular_artists ul.container_artists::-webkit-scrollbar
+{
+  display: none;
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem,
+main#song_side section#popular_artists ul.container_artists li.artist_item
+{
+  height: 90%;
+  width: 32%;
+  padding: 0 .25rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: space-around;
+  background-color: hsl(var(--hue), 0%, 3%, .7);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  border: solid .1rem hsl(var(--hue), 55%, 50%, .5);
+  border-radius: .5rem;
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem:hover,
+main#song_side section#popular_artists ul.container_artists li.artist_item:hover
+{
+  background-color: hsl(var(--hue), 0%, 5%, .9);
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem img.svg,
+main#song_side section#popular_artists ul.container_artists li.artist_item img.svg
+{
+  height: 3rem;
+  width: 3rem;
+  filter: unset;
+  transition: .2s ease;
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem .container_song_author:hover
+{
+  content: url('../img/play-fill.svg');
+  height: 6rem;
+  /*This sets the color to pink*/
+  filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(7335%) hue-rotate(321deg) brightness(101%) contrast(106%);
+  cursor: pointer;
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem span.container_song_author
+{
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+main#song_side section#popular_songs ul.container_songs li.songItem.highlight_list_item
+{
+  background-color: hsl(var(--hue), 0%, 5%);
+  border-color: hsl(var(--hue), 0%, 100%);
+}
+
+/*Few specs on popular artists insidemain*/
+main#song_side section#popular_artists
+{
+  height: 25%;
+}
+
+main#song_side section#popular_artists ul.container_artists li.artist_item
+{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  margin: 0 1.25rem;
+  justify-content: space-evenly;
+}
+
+main#song_side section#popular_artists ul.container_artists li.artist_item img.svg
+{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  padding: .25rem;
+  filter: none;
+}
+
+main#song_side section#popular_artists ul.container_artists li.artist_item img.svg:hover
+{
+  content: url('../img/heart-fill.svg');
+  padding: 0 1.25rem;
+  border: .2rem solid hsl(var(--hue), 100%, 20%);
+  border-radius: 50%;
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+nav#menu_side.collapsed
+{
+  width: 5%;
+  padding: 0;
+  transition: .2s linear;
+}
+
+nav#menu_side img.svg.collapse
+{
+  cursor: pointer;
+  transition: all .3s linear;
+  margin: 0 auto;
+}
+
+main#song_side.collapsed
+{
+  width: 95%;
+  transition: .2s linear;
+}
+
+nav#menu_side ul#menu_category .selected
+{
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: hsl(var(--hue), 100%, 50%);
+}
+
+nav#menu_side ul#menu_category li.selected img.svg
+{
+  content: url('../../assets/img/music-note-beamed.svg');
+  height: 2rem;
+  width: 10%;
+  margin: 0 1rem 0 .5rem;
+  border: none;
+  /*This sets the color to pink*/
+  filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(7335%) hue-rotate(321deg) brightness(101%) contrast(106%);
+}
+
+.hidden
+{
+  display: none!important;
+}

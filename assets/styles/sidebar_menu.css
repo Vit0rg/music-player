@@ -1,0 +1,116 @@
+nav#menu_side
+{
+  height: 100%;
+  padding: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: hsl(var(--hue), 0%, 5%);
+  z-index: 2;
+  flex-grow: 1;
+  box-shadow: 0 .05rem .2rem hsl(var(--hue), 55%, 50%);
+}
+
+nav#menu_side ul#menu_category li
+{
+  padding: .25rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: hsl(var(--hue), 0%, 50%);
+  cursor: pointer;
+  text-shadow: .03rem .02rem hsl(var(--hue), 55%, 50%);
+  transition: .3s linear;
+}
+
+nav#menu_side ul#menu_category li:hover,
+.highlight_list_item
+{
+  background-color: hsl(var(--hue), 0%, 50%, .1);
+  transition: .3s linear;
+}
+
+nav#menu_side ul#menu_category li:not(.selected):hover
+{
+  color: hsl(var(--hue), 0%, 100%);
+}
+
+nav#menu_side ul#menu_category li:not(.selected) img
+{
+  height: 1rem;
+  width: 1rem;
+  margin: 0 1.25rem;
+  filter: brightness(100%) saturate(100%);
+  border: .2rem solid hsl(var(--hue), 0%, 50%);
+  border-radius: 50%;
+  transition: .2s linear;
+}
+
+nav#menu_side ul#menu_category span
+{
+  width: max-content;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav#menu_side ul#menu_song
+{
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: scroll;
+  word-wrap: break-word;
+}
+
+nav#menu_side ul#menu_song li
+{
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  list-style-type: none;
+  background-color: hsl(var(--hue), 0%, 5%, .6);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: soft-light;
+  cursor: pointer;
+  transition: 0.3s linear;
+  border: .05rem hsl(var(--hue), 100%, 50%, .3);
+  border-style: solid;
+}
+
+nav#menu_side ul#menu_song li.highlight_list_item
+{
+  background-color: hsl(var(--hue), 0%, 30%, .1);
+  border-color: hsl(var(--hue), 0%, 70%);
+  transition: 0.3s ease;
+}
+
+nav#menu_side ul#menu_song li:hover
+{
+  background-color: hsl(var(--hue), 0%, 20%, .3);
+}
+
+nav#menu_side ul#menu_song li .container_song_author
+{
+  height: 100%;
+  padding: .2rem .5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-x: hidden;
+  text-align: center;
+}
+
+nav#menu_side ul#menu_song img
+{
+  height: 3rem;
+  width: 3rem;
+}

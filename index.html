@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/music-note-beamed.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <link rel="stylesheet" href="./assets/styles/sidebar_menu.css">
+  <link rel="stylesheet" href="./assets/styles/main_content.css">
+  <link rel="stylesheet" href="./assets/styles/footer_player.css">
+  <link rel="stylesheet" href="./assets/styles/fx.css">
+  <script defer src="./assets/scripts/index.js"></script>
+  <title>Music Player</title>
+</head>
+
+<body>
+    <article>
+      <nav id="menu_side">
+
+          <img class="svg collapse" src="./assets/img/menu-button.svg" title="Collapse menu"> 
+
+          <ul id="menu_category">
+            <li class="category selected">
+              <img class="svg">
+              <span>Playlist</span>
+            </li> 
+            <li class="category">
+              <img class="svg">
+              <span>Last Listening</span>
+            </li>
+            <li class="category">
+              <img class="svg">
+              <span>Recommended</span>
+            </li>
+          </ul>
+
+          <ul id="menu_song">
+          </ul>
+      </nav>
+
+      <main id="song_side">
+        <nav>
+          <ul id="pages">
+            <li>Discover<span></span></li>
+            <li>MY LIBRARY</li>
+            <li>RADIO</li>
+          </ul>
+
+          <span id="search">
+            <img class="svg" src="./assets/img/search.svg">
+            <input type="text" placeholder="Search Music...">
+          </span>
+
+          <img id="user" src="./assets/img/interrogacao.png" alt="User" title="vit0rg" href="https://github.com/Vit0rg">
+        </nav>
+        
+        <section id="song_info">
+          <h1>Artist name - Song name</h1>
+          <div id="buttons">
+            <button>FAVORITE</button>
+            <button>FOLLOW</button>
+          </div>
+        </section>
+        
+        <section id="popular_songs">
+            <span class="container_title_scroll">
+              <h2>Popular Songs</h2>
+              <div class="buttons">
+                <img id="left_scroll_songs" class="svg" src="./assets/img/arrow-left-circle-fill.svg">
+                <img id="right_scroll_songs" class="svg" src="./assets/img/arrow-right-circle-fill.svg">
+              </div>
+            </span>
+            <ul class="container_songs">
+              
+            </ul>
+        </section>
+
+        <section id="popular_artists">
+            <span class="container_title_scroll">
+              <h2>Popular Artists</h2>
+              <div class="buttons">
+                <img id="left_scroll_artists" class="svg" src="./assets/img/arrow-left-circle-fill.svg">
+                <img id="right_scroll_artists" class="svg" src="./assets/img/arrow-right-circle-fill.svg">
+              </div>
+            </span>
+            <ul class="container_artists">
+            </ul>
+        </section>
+
+      </main>
+    </article>
+    
+    <footer id="master_player">
+
+      <section id="side_player">
+        <div id="wave">
+          <div class="waves"></div>
+          <div class="waves"></div>
+          <div class="waves"></div>
+          <div class="waves"></div>
+          <div class="waves"></div>
+        </div>
+
+        <span id="song_playing">
+          <span class="container_song_author">
+            <h4>
+              Song Name
+            </h4>
+          </span>
+        </span>
+      </section>
+
+      <section id="track_controller">
+        <img id ="back" class="svg" src="./assets/img/skip-start-fill.svg">
+        <img id="masterPlay" class="svg" src="./assets/img/play-fill.svg">
+        <img id="next" class="svg" src="./assets/img/skip-end-fill.svg">
+      </section>
+
+      <section id="track_timer">
+        <span id="currentStart">0:00</span>
+        <div class="bar_container">
+          <input type="range" id="seek" min="0" value="0" max="100">
+          <span id="progressBar"></span>
+        </div>
+        <span id="currentEnd">0:00</span>
+        
+      </section>
+
+      <section id="volume_controller">
+        <img id="vol_icon" class="svg" src="./assets/img/volume-down-fill.svg">
+        
+        <div class="bar_container">
+          <input type="range" id="volume" min="0" value="50" max="100">
+          <span id="curVolume"></span>
+        </div>
+      </section>
+    </footer>
+</body>
+</html>

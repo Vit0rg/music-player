@@ -1,0 +1,270 @@
+/*FOOTER:*/
+footer#master_player
+{
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: hsl(var(--hue), 0%, 7%);
+  z-index: 2;
+}
+
+footer#master_player #side_player
+{
+  height: 100%;
+  width: 25%;
+  padding: 0 .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer#master_player #side_player #wave
+{
+  height: 2.5rem;
+  width: 10%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;  
+}
+
+footer#master_player #side_player #wave .waves
+{
+  height: .25rem;
+  width: .4rem;
+  padding-bottom: .25rem;
+  background-color: hsl(var(--hue), 100%, 50%);
+  animation: paused;
+  border-radius: 2rem 2rem 0 0;
+}
+
+footer#master_player #side_player #wave :nth-child(2)
+{
+  height: 1.25rem;
+}
+
+footer#master_player #side_player #wave :nth-child(3)
+{
+  height: .75rem;
+}
+
+footer#master_player #side_player #wave :nth-child(4)
+{
+  height: 1.75rem;
+}
+
+footer#master_player #side_player #wave :nth-child(5)
+{
+  height: .25rem;
+}
+
+footer#master_player #side_player #wave.waves_animation_active .waves
+{
+  animation: wave .5s linear infinite alternate-reverse;
+}
+
+footer#master_player #side_player #wave.waves_animation_active :nth-child(2)
+{
+  animation-delay: .3s;
+}
+
+footer#master_player #side_player #wave.waves_animation_active :nth-child(3)
+{
+  animation-delay: .5s;
+}
+
+footer#master_player #side_player #wave.waves_animation_active :nth-child(4)
+{
+  animation-delay: .75s;
+}
+
+footer#master_player #side_player #wave.waves_animation_active :nth-child(5)
+{
+  animation-delay: 1s;
+}
+
+@keyframes wave 
+{
+  0%
+  {
+    height: 0;
+    opacity: 0;
+  }
+  50%
+  {
+    height: 50%;
+    opacity: .5;
+  }
+  100%
+  {
+    height: 90%;
+    opacity: 1;
+  }
+}
+
+footer#master_player #side_player span#song_playing
+{
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer#master_player #side_player span#song_playing span.container_song_author
+{
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+
+footer#master_player #side_player span#song_playing span.container_song_author h4
+{
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer#master_player #track_controller
+{
+  height: 100%;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer#master_player #track_controller img.svg
+{
+  border-radius: 2rem;
+}
+
+footer#master_player #track_controller .svg:hover
+{
+  height: 3.25rem;
+  width: 3.25rem;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+footer#master_player #track_timer
+{
+  position: relative;
+  height: 100%;
+  width: 45%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+
+footer#master_player #track_timer span
+{
+  padding: 0 .5rem;
+  font-size: 1.25rem;
+}
+
+footer#master_player #track_timer input#seek,
+footer#master_player #volume_controller input#volume
+{
+  -webkit-appearance: none;
+  appearance: none;
+  height: .5rem;
+  width: 100%;
+  background: hsl(var(--hue), 0%, 40%, .3);
+  display: inline-flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  transition: .3s linear;
+}
+
+footer#master_player #track_timer input#seek:hover,
+footer#master_player #volume_controller input#volume:hover
+{
+  background: hsl(var(--hue), 0%, 30%);
+  cursor: pointer;
+}
+
+footer#master_player #track_timer .bar_container
+{
+  position: relative;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+footer#master_player #track_timer input#seek,
+footer#master_player #volume_controller input#volume
+{
+  position: absolute;
+  width: 100%;
+  
+  z-index: 1;
+}
+
+footer#master_player #track_timer #progressBar,
+footer#master_player #volume_controller #curVolume
+{
+  content: '';
+  position: absolute;
+  height: .8rem;
+  background-color: hsl(var(--hue), 100%, 50%);
+  border-radius: 2rem;
+  z-index: 0;
+  transition: .2s linear;
+}
+
+#seek::-webkit-slider-thumb,
+#seek::-moz-range-thumb,
+#volume::-webkit-slider-thumb,
+#volume::-moz-range-thumb
+{
+  -webkit-appearance: none;
+  appearance: none;
+  height: .75rem;
+  width: .75rem;
+  background: hsl(var(--hue), 100%, 20%);
+  border: .25rem solid hsl(var(--hue), 100%, 50%);
+  border-radius: 2rem;
+  z-index: 2;
+}
+
+footer#master_player #track_timer,
+footer#master_player #volume_controller
+{
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+footer#master_player #volume_controller
+{
+  width: 15%;
+}
+
+footer#master_player #volume_controller img.svg:hover
+{
+  filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(173deg) brightness(108%) contrast(106%);
+}
+
+footer#master_player #volume_controller .bar_container
+{
+  position: relative;
+  height: 100%;
+  width: 70%;
+  display: inline-flex;
+  align-items: center;
+}
+
+footer#master_player #volume_controller input#volume
+{
+  display: inline-flex;
+  flex-direction: row;
+}

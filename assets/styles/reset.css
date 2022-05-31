@@ -1,0 +1,97 @@
+:root
+{
+  --hue: 328;
+  /*font-size: clamp(14px + 1vw, 2vw, 2vw + 1rem);*/
+}
+
+*, ::after, ::before
+{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body
+{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: hsl(var(--hue), 0%, 100%);
+}
+
+
+h1, h2, h3
+{
+  text-shadow: .05rem .05rem hsl(var(--hue), 55%, 50%);
+}
+
+h1
+{
+  width: fit-content;
+  font-size: 2.5rem;
+  font-weight: 550;
+}
+
+h2
+{
+  font-size: 1.75rem;
+  font-weight: 650;
+}
+
+h3
+{
+  font-size: 1.75rem;
+  font-weight: 550;
+  color: hsl(var(--hue), 100%, 45%);
+}
+
+h4
+{
+  font-size: 1rem;
+  font-weight: 550;
+  color: hsl(var(--hue), 0%, 85%);
+}
+
+h5
+{
+  font-size: 1rem;
+  font-weight: 550;
+  color: hsl(var(--hue), 0%, 60%);
+}
+
+li
+{
+  list-style-type: none;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+img.svg
+{
+  height: 2.5rem;
+  width: 2.5rem;
+  /*This sets the default color (black) to white*/
+  filter: invert(100%) sepia(0%) saturate(7478%) hue-rotate(173deg) brightness(108%) contrast(106%);
+}
+
+img.svg:hover
+{
+  /*This sets the color to pink:*/
+  filter: brightness(0) saturate(100%) invert(17%) sepia(84%) saturate(7335%) hue-rotate(321deg) brightness(101%) contrast(106%);
+}
+
+/*Inside article there is the sidebar and the main content:*/
+article
+{
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
