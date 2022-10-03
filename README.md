@@ -59,7 +59,7 @@ As músicas utilizadas não são de minha autoria ou posse, todos os direitos re
 Single page application with minimalist design
 
 ### Available at:
-[Github-page](https://vit0rg.github.io/responsive-searchbar/)
+[Github-page](https://vit0rg.github.io/music-player/)
 
 ### Technologies used: 
 HTML5, CSS3, JS
